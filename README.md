@@ -26,4 +26,4 @@ The file has a configuration of this type, e.g .:
 where the first row are the keys of the table and following the data:
 \ #myhostname | mydatabase | myuser | myport (default 3306)
 To add a new resource just create a new line at the end of the file.
-** N.B .: it is important to leave a newline at the end of the file otherwise the last line will be ignored **
+**N.B .: it is important to leave a newline at the end of the file otherwise the last line will be ignored**
