@@ -197,10 +197,10 @@ PLEASE ANSWER YES OR NO.
 	# allow user to choose from a previous backup
 	echo "choose from one of the following backups:"
 	declare -a backup_options
-	backup_path="/backup/" # TODO: parametrize this value
+	backup_path="$DIR/backup/" # TODO: parametrize this value
 	while IFS='' read -r line; do backup_options+=("$line"); done < <(ls "$backup_path")
 	# shellcheck disable=SC2045
-	for f in $(ls "/backup/"); do
+	for f in $(ls "$DIR/backup/"); do
 		echo "$COUNTER) $f"
 		((COUNTER++))
 	done
@@ -263,7 +263,7 @@ function load_preset(){
 	local COUNTER
 
 	COUNTER=0
-	presets="dbpreset.conf" # preset configuration file
+	presets="$DIR/dbpreset.conf" # preset configuration file
 	delete=("$skip_preset_id") # array with item names that should be deleted from listing
 	declare -a from_options # associative array with options
 
