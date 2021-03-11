@@ -15,7 +15,8 @@ Note
 TODO
 ---------------------------
 - database_app_data: to be parameterized, giving the possibility to choose the path of a file that contains the SQL to be initialized after the DB cloning.
-- backup_path: to be parameterized, giving the possibility to choose the path where the backups of the databases are hosted
+- backup_path: to be parameterized, giving the possibility to choose the path where the backups of the databases are hosted.
+- behavior in case of wrong password of the db after the first export: instead of terminating the script with errors, it would be the case to put the step in loop until the user decides to give up and then of his will to terminate the execution.
 
 Resources management
 ---------------------------
